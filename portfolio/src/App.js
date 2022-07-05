@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CustomBtn from './Components/CustomBtn'
+import Toolbar from './Components/ToolBar'
 import './App.css';
 
 const theme = createTheme({
@@ -29,13 +30,11 @@ const theme = createTheme({
 });
 
 function App() {
-   return (
-      <div className="App">
-         <ThemeProvider theme={theme}>
-            <CustomBtn/>
-         </ThemeProvider>
-      </div>
-   );
+  return (
+    <div className="App" style={{color: "#E3ECF0", height: "100Opx"}} >
+      <Toolbar/>
+    </div>
+  );
 }
 
 {/* <header className="App-header">
