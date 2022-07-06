@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #54C3FF;
+}
+
+.navebar-container { 
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.navbar-logo{
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 60px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.nav-menue{ 
+    display: flex;
+    align-items: center;
+}
+
+.nav-item { 
+    background-color: trasparent;
+    font-size: 30px;
+    margin: 10px;
+    list-style-type: none;
+}
+
+.nav-links { 
+    color: white;
+    text-decoration: none;
+}

@@ -1,56 +1,23 @@
-import logo from './logo.svg';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 import CustomBtn from './Components/CustomBtn'
 import Toolbar from './Components/ToolBar'
-import './App.css';
+import Page from './Components/Page'
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main:"#47CFFF",
-    },
-    secondary: {
-      main:"#4B54FF",
-    },
-  },
-  typography: {
-    fontFamily: [
-      'Franklin'
-    ],
-    h4: {
-      fontWeight: 600,
-      fontSize: 28,
-      lineHeight: '2rem',
-      },
-    h5: {
-      fontWeight: 100,
-      lineHeight: '2rem',
-    },
-  },
-});
 
 function App() {
   return (
-    <div className="App" style={{color: "#E3ECF0", height: "100Opx"}} >
-      <Toolbar/>
-    </div>
+    <>
+      <Router>
+        <Toolbar/>
+        <Routes>
+          <Route path="/" exact/>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
-{/* <header className="App-header">
-            
-   <img src={logo} className="App-logo" alt="logo" />
-   
-   <p>
-      Edit <code>src/App.js</code> and save to reload.
-   </p>
-
-   <a className="App-link"
-      href="https://reactjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-   > Learn React </a>
-
-</header> */}
 
 export default App;

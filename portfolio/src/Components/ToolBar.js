@@ -1,32 +1,48 @@
-import React from 'react'
-import { StyleSheet, Image, Text, View } from "react";
-import { Toolbar } from '@mui/material';
-import CustomBtn from './CustomBtn'
-import { withStyles } from '@mui/material/styles';
+import React, {useState} from 'react';
+import './ToolBar.css';
+import logo from '../img/logo.png';
+import CustomBtn from './CustomBtn';
+import {Link} from 'react-router-dom';
 
 function ToolBar() {
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+
     return (
-        <div style={stylesheet.div}>
-            <image src={"../img/logo.png"} />
-            <h1 style={{color:'white'}}>Louis Brochard</h1>
-            <CustomBtn txt="Articles"/>
-            <CustomBtn txt="Contact"/>
-            <CustomBtn txt="CV"/>
-        </div>
+        <>
+            <nav className="navbar">
+                <div className="navebar-container">
+                    <Link to="/" className="navbar-logo">
+                        {/* <img src ={logo}/> */}
+                        Louis Brochard
+                    </Link>
+                    <div className="menu-icon" onClick={handleClick}>
+                        <p> {click ? 'x' : '='} </p>
+                    </div>
+                    
+                    <ul className={ click ? 'nav-menue active' : 'nav-menue'}>
+                        <li className="nav-item">
+                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                                All Articles
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+                                Contact
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/cv" className="nav-links" onClick={closeMobileMenu}>
+                                CV
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </>
     )
 }
 
 export default ToolBar
-
-const stylesheet = {
-    div:
-    {
-        display: "flex",
-        color: "blue",
-        backgroundColor: "#54C3FF",
-        padding: "10px",
-        fontFamily: "Arial",
-        orientation: "horizontal",
-        item: "center",
-    },
-  };
