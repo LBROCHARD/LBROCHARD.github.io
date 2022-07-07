@@ -1,8 +1,14 @@
 import React from 'react'
+import './PageHolder.css'
+import Page from './Page';
 
 function PageHolder() {
   return (
-    <div>PageHolder</div>
+    <div className="page-holder">
+      <Page/>
+      <Page/>
+      <Page/>
+    </div>
   )
 }
 

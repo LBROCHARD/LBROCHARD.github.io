@@ -15,16 +15,16 @@ function ToolBar() {
             <nav className="navbar">
                 <div className="navebar-container">
                     <Link to="/" className="navbar-logo">
-                        {/* <img src ={logo}/> */}
+                        <img src ={logo} alt="logo" className='logo'/>
                         Louis Brochard
                     </Link>
-                    <div className="menu-icon" onClick={handleClick}>
+                    <div className="mobile-menue-icon" onClick={handleClick}>
                         <p> {click ? 'x' : '='} </p>
                     </div>
                     
-                    <ul className={ click ? 'nav-menue active' : 'nav-menue'}>
+                    <ul className={ click ? 'nav-menue-active' : 'nav-menue'}>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/all-articles" className="nav-links" onClick={closeMobileMenu}>
                                 All Articles
                             </Link>
                         </li>

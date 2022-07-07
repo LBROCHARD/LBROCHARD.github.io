@@ -1,0 +1,25 @@
+.page {
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    padding: 30px;
+    width: 80%;
+    font-family: 'Libre Franklin', sans-serif;
+    margin-bottom: 50px;
+}
+
+.date {
+    color: #B6B6B6;
+    font-style: italic;
+    font-weight: normal;
+    text-align: right;
+    margin-right: 20px;
+}
+
+h1 {
+    color: black;
+}
+
+.divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

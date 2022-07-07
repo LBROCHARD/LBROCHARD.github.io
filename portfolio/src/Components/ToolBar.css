@@ -1,5 +1,6 @@
 .navbar {
     background-color: #54C3FF;
+    margin: 0;
 }
 
 .navebar-container { 
@@ -7,29 +8,56 @@
     display: flex;
     align-items: center;
     font-family: 'Libre Franklin', sans-serif;
+    padding: 10px;
 }
 
 .navbar-logo{
     font-family: 'Libre Franklin', sans-serif;
     text-decoration: none;
-    color: white;
-    font-size: 60px;
-}
-
-.menu-icon {
-    cursor: pointer;
-}
-
-.nav-menue{ 
     display: flex;
     align-items: center;
+    color: white;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.logo {
+    height: 40px;
+    margin: 5px;
+}
+
+.mobile-menue-icon {
+    cursor: pointer;
+    color: white;
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+.mobile-menue-icon-visible {
+    cursor: pointer;
+    color: white;
+}
+
+.nav-menue { 
+    display: flex;
+    align-items: center;
+    justify-self: right;
+    margin-left: auto;
+}
+
+.nav-menue-active { 
+    display: flex;
 }
 
 .nav-item { 
     background-color: trasparent;
-    font-size: 30px;
+    font-size: 25px;
     margin: 10px;
     list-style-type: none;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .nav-links { 
